@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install required programms
 sudo apt install git -y
 sudo apt install git build-essential pkg-config libusb-1.0.0 -y
@@ -6,3 +8,6 @@ sudo apt install git build-essential pkg-config libusb-1.0.0 -y
 git clone https://github.com/todbot/blink1-tool.git
 cd blink1-tool
 make
+
+
+
