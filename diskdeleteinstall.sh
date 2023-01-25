@@ -3,6 +3,7 @@
 blink1-tool --delay 1000 --rgb 255,136,0  --blink 10
 
 # Use DD to securely erase the disk 7 times
+sudo
 for i in {1..7}; do 
     dd if=/dev/urandom of=/dev/sda1 bs=1M status=progress
     if  [$? -ne 0 ]; then
