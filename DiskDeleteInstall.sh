@@ -8,7 +8,7 @@ for i in {1..7}; do
     if  [$? -ne 0 ]; then
         #Make blink1 blink red if there is an error
         blink1-tool --delay 1000 --red  --blink 0
-        echo "Error erasing disk /dev$disk"
+        echo "Error erasing disk"
         break
     fi
 done
