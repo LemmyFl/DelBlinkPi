@@ -1,0 +1,2 @@
+# Install required programms
+sudo apt install git build-essential pkg-config libusb-1.0.0
