@@ -1,18 +1,10 @@
-#!/bin/bash
-# Script to automatically detect and securely erase newly connected disks using udev and Blink(1)
-
-#echo 'ACTION=="add", KERNEL=="sd*", SUBSYSTEM=="block", RUN+="/usr/local/bin/erase_disk.sh %k"' | sudo tee /etc/udev/rules.d/erase_disk.rules
-#sudo udevadm control --reload-rules
-
-
-/bin/bash
+#/bin/bash
 # Make blink1 blink orange for 10 seconds before erasing
 blink1-tool --delay 1000 --rgb 255,136,0  --blink 10
 
 # Use DD to securely erase the disk 7 times
-
 for i in {1..7}; do 
-    dd if=/dev/urandom of=/dev/sda bs=1M status=progress
+    dd if=/dev/urandom of=/dev/sda1 bs=1M status=progress
     if  [$? -ne 0 ]; then
         #Make blink1 blink red if there is an error
         blink1-tool --delay 1000 --red  --blink 0
