@@ -16,4 +16,5 @@ for i in {1..7}; do
 done
 
 # Make blink1 green when erase is completed successfully
+sleep 5
 blink1-tool --green
