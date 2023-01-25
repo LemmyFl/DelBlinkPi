@@ -5,11 +5,15 @@ echo 'ACTION=="add", KERNEL=="sd*", SUBSYSTEM=="block", RUN+="/usr/local/bin/era
 sudo udevadm control --reload-rules
 
 
-
+/bin/bash
 # Make blink1 blink orange for 10 seconds before erasing
 blink1-tool --delay 1000 --rgb 255,136,0  --blink 10
 
 # Use DD to securely erase the disk 7 times
+dd if=/dev/urandom of=/dev/hda
+
+
+
 for i in {1..7}; do
     dd if=/dev/zero of=/dev/$disk bs=1M status=progress
     if [ $? -ne 0 ]; then
