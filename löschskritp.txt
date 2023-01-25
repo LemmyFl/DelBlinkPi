@@ -1,0 +1,5 @@
+#!/bin/bash
+# Script to automatically detect and securely erase newly connected disks using udev and Blink(1)
+
+#Blink(1) blinks 10 sec orange
+blink1-tool --delay 1000 --rgb 255,136,0  --blink 10
