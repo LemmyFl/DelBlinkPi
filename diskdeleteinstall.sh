@@ -4,6 +4,8 @@ blink1-tool --delay 1000 --rgb 255,136,0  --blink 10
 
 blink1-tool --red
 
+sleep 5
+
 # Use DD to securely erase the disk 7 times with random numbers
 for i in {1..7}; do
     sudo dd if=/dev/urandom of=/dev/sda1 bs=1M status=progress
