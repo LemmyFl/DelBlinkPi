@@ -11,7 +11,7 @@
 
 # Use DD to securely erase the disk 7 times with random numbers
 for i in {1..7}; do
-    sudo dd if=/dev/zero of=/dev/sda bs=1M status=none
+    sudo dd if=/dev/zero of=/dev/sda bs=1M status=noxfer onfail=exit
 done
 
 # Make blink1 green when erase is completed successfully
