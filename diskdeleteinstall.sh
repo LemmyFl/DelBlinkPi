@@ -1,6 +1,6 @@
 #/bin/bash
 sudo apt update
-# Make blink1 blink orange for 10 seconds before erasing
+##Make blink1 blink orange for 10 seconds before erasing
 
 
 ##blink1-tool --delay 1000 --rgb 255,136,0  --blink 10
@@ -11,7 +11,7 @@ sudo apt update
 
 # Use DD to securely erase the disk 7 times with random numbers
 ##for i in {1..7}; do
-#    sudo dd if=/dev/zero of=/dev/sda bs=1M status=progress
+    sudo dd if=/dev/zero of=/dev/sda bs=1M status=progress onfail=blink1-tool --delay 1000 --red  --blink 0
 ##done
 
 # Make blink1 green when erase is completed successfully
