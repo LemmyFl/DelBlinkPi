@@ -13,3 +13,6 @@ done
 
 # Make blink1 green when erase is completed successfully
 blink1-tool --green
+
+
+test123
