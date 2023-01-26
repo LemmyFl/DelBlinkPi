@@ -16,8 +16,8 @@ for i in {1..7}; do
     'blink1-tool --delay 1000 --red  --blink 0'
     break
     fi
-done
-done
+#done
+#done
 
 # Make blink1 green when erase is completed successfully
 sleep 5
