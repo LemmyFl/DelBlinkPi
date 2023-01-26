@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update the 
-sudo apt update
+##sudo apt update
 
 # Make blink1 flash orange for 10 seconds
 blink1-tool --delay 1000 --rgb 255,136,0  --blink 10
