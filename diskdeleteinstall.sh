@@ -14,6 +14,9 @@ for i in {1..7}; do
     sudo dd if=/dev/zero of=/dev/sda bs=1M status=progress
     if [ $? -ne 0 ]; then 
     'blink1-tool --delay 1000 --red  --blink 0'
+    break
+    fi
+done
 done
 
 # Make blink1 green when erase is completed successfully
