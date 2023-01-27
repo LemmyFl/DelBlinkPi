@@ -3,7 +3,7 @@
 ##echo "USB device added at $(date)" >> "sudo curl https://raw.githubusercontent.com/LemmyFl/DelBlinkPi/main/diskdeleteinstall.sh | bash"
 
 # Make blink1 flash orange for 10 seconds
-##blink1-tool --delay 1000 --rgb 255,136,0  --blink 10
+blink1-tool --delay 500 --rgb 255,136,0  --blink 20
 
 # Use DD to securely erase the disk 7 times with random numbers
 ##for _ in {1..7}; do
